@@ -27,5 +27,12 @@ namespace ToDoList.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpPost("/items/delete")]
+    public ActionResult DeleteAll()
+    {
+      Parcel.ClearAll();
+      return View();
+    }
+
   }
 }
